@@ -1,23 +1,40 @@
 //your code here
-let inpi=document.getElementById('input');
+let input = document.getElementById('input');
 
-let expresso="";
-function solve(e){
-    if(e == 'ans'){
-        // Eval below is the inbuilt function for solving the expressions. 
-        let result=eval(expresso);
+let expression = "";
+
+function solve(e) {
+
+    // console.log(e)
+
+    if (e === 'ans') {
+
+        // evaluate the expression
+
+        let result = eval(expression);
+
         console.log(result);
-         inpi.value=result;
-    }
-    else if(e == 'clear'){
-        expresso ="";
-        console.log(expresso);
-        inpi.value=expresso;
+
+        input.value = result;
+
     }
 
-    else{
-        expresso += e;
-    console.log(expresso);
-     inpi.value=expresso;
+    else if (e === 'clear') {
+
+        expression = "";
+
+        input.value = ""
+
     }
+
+    else {
+
+        expression += e;
+
+        console.log(expression)
+
+        input.value = expression;
+
+    }
+
 }
